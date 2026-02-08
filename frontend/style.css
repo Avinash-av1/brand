@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6fa;
+    text-align: center;
+    padding: 40px;
+}
+
+h1 {
+    color: #2c3e50;
+}
+
+textarea {
+    width: 60%;
+    height: 100px;
+    padding: 12px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.buttons {
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+pre {
+    background-color: white;
+    padding: 15px;
+    width: 60%;
+    margin: auto;
+    text-align: left;
+    border-radius: 4px;
+}
