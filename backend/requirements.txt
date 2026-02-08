@@ -1,12 +1,3 @@
 fastapi
 uvicorn[standard]
-python-dotenv
-python-multipart
-transformers
-groq
-requests
-httpx
-pillow
-speechrecognition
-torch
-huggingface-hub
+pydantic
