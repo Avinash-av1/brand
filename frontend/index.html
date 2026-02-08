@@ -6,22 +6,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="app-container">
+    <h1>🚀 Brand Builder</h1>
+    <p class="subtitle">Create brand ideas, content & insights instantly</p>
 
-    <h1>🚀 BizForge</h1>
-    <p>GenAI-powered branding automation platform</p>
+    <textarea
+      id="inputText"
+      placeholder="Enter your idea or text..."
+      rows="4"
+    ></textarea>
 
-    <textarea id="inputText" placeholder="Enter your idea / text here..."></textarea>
-
-    <div class="buttons">
-        <button onclick="generateBrand()">Brand Names</button>
-        <button onclick="generateContent()">Marketing Content</button>
-        <button onclick="analyzeSentiment()">Sentiment Analysis</button>
-        <button onclick="chatAI()">Branding Chat</button>
+    <div class="button-group">
+      <button onclick="generateBrand()">Brand Names</button>
+      <button onclick="generateContent()">Marketing Content</button>
+      <button onclick="analyzeSentiment()">Sentiment</button>
+      <button onclick="chatAI()">AI Chat</button>
     </div>
 
-    <h3>Output</h3>
-    <pre id="output">Result will appear here...</pre>
+    <div id="loading" class="loading hidden">⏳ Processing...</div>
+    <pre id="output" class="output"></pre>
+  </div>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>
