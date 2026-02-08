@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from fastapi.middleware.cors import CORSMiddleware
 
 from ai_service import (
@@ -14,13 +14,18 @@ app = FastAPI(title="BizForge API")
 # Allow frontend access
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["*"],  # we will restrict this later
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
 class InputText(BaseModel):
-    text: str
+    text: str = Field(
+        ...,
+        min_length=3,
+        max_length=300,
+        description="Input text must be between 3 and 300 characters"
+    )
 
 
 @app.post("/api/brand-name")
